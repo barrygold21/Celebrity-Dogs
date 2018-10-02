@@ -218,7 +218,8 @@ namespace Dog_Top_Trumps
 
         public static void ReadFile(int cardsInPlay)
         {
-            using (StreamReader fileReader = new StreamReader(@"C:\Users\Conor\Documents\TestFile.txt"))
+            string filePath = System.IO.Path.GetFullPath("dogs.txt");
+            using (StreamReader fileReader = new StreamReader(filePath))
             {
                 string line;
                 int i = 0;
